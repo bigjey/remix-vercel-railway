@@ -2,9 +2,11 @@
   "private": true,
   "sideEffects": false,
   "scripts": {
-    "build": "remix build",
+    "build": "prisma generate && remix build",
     "dev": "remix dev",
-    "typecheck": "tsc"
+    "typecheck": "tsc",
+    "start": "node ./",
+    "postinstall": "prisma generate"
   },
   "dependencies": {
     "@prisma/client": "^4.13.0",
